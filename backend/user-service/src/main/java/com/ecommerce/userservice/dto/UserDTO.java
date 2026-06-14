@@ -1,5 +1,10 @@
 package com.ecommerce.userservice.dto;
 
-// TODO: Implement
+import lombok.Data;
+
+@Data
 public class UserDTO {
+    private String username;
+    private String password;
+    private String email;
 }
