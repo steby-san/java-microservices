@@ -2,4 +2,4 @@ server:
   port: 0 # Để port ngẫu nhiên hoặc sau này cấu hình cụ thể
 spring:
   application:
-    name: order-service
+    name: config-server
