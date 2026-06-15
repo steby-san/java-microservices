@@ -1,0 +1,12 @@
+com\ecommerce\productservice\service\ProductService.class
+com\ecommerce\productservice\kafka\ProductConsumer.class
+com\ecommerce\productservice\entity\Product.class
+com\ecommerce\productservice\config\DataSeeder.class
+com\ecommerce\productservice\dto\ProductDTO.class
+com\ecommerce\productservice\ProductServiceApplication.class
+com\ecommerce\productservice\config\KafkaConfig.class
+com\ecommerce\productservice\repository\ProductRepository.class
+com\ecommerce\productservice\controller\ProductController.class
+com\ecommerce\productservice\kafka\ProductProducer.class
+com\ecommerce\productservice\config\RedisConfig.class
+com\ecommerce\productservice\entity\Product$ProductBuilder.class

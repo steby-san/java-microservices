@@ -1,0 +1,6 @@
+com\ecommerce\userservice\entity\User.class
+com\ecommerce\userservice\UserServiceApplication.class
+com\ecommerce\userservice\dto\UserDTO.class
+com\ecommerce\userservice\repository\UserRepository.class
+com\ecommerce\userservice\service\UserService.class
+com\ecommerce\userservice\controller\UserController.class

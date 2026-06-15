@@ -1,0 +1,6 @@
+com\ecommerce\notificationservice\NotificationServiceApplication.class
+com\ecommerce\notificationservice\service\NotificationService.class
+com\ecommerce\notificationservice\entity\Notification.class
+com\ecommerce\notificationservice\repository\NotificationRepository.class
+com\ecommerce\notificationservice\dto\NotificationDTO.class
+com\ecommerce\notificationservice\controller\NotificationController.class
