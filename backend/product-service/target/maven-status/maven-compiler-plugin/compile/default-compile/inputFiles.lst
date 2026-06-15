@@ -1,0 +1,11 @@
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\config\KafkaConfig.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\dto\ProductDTO.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\kafka\ProductConsumer.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\repository\ProductRepository.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\service\ProductService.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\controller\ProductController.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\ProductServiceApplication.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\config\DataSeeder.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\config\RedisConfig.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\entity\Product.java
+G:\miniproject\java-microservices\backend\product-service\src\main\java\com\ecommerce\productservice\kafka\ProductProducer.java
