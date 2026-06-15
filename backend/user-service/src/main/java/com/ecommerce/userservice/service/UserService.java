@@ -1,46 +1,50 @@
 package com.ecommerce.userservice.service;
 
+import com.ecommerce.userservice.dto.UserDTO;
 import com.ecommerce.userservice.entity.User;
 import com.ecommerce.userservice.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.ecommerce.userservice.util.JwtUtil;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class UserService {
 
-    @Autowired
-    private UserRepository repository;
+    private final UserRepository userRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
+    private final JwtUtil jwtUtil;
 
-    public List<User> getAllUsers() {
-        return repository.findAll();
+    public UserService(UserRepository userRepository, JwtUtil jwtUtil) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = new BCryptPasswordEncoder();
+        this.jwtUtil = jwtUtil;
     }
 
-    public User getUserById(Long id) {
-        return repository.findById(id).orElse(null);
+    public User register(UserDTO dto) {
+        if (userRepository.findByUsername(dto.getUsername()).isPresent()) {
+            throw new RuntimeException("Username already exists");
+        }
+        User user = new User();
+        user.setUsername(dto.getUsername());
+        user.setEmail(dto.getEmail());
+        user.setPasswordHash(passwordEncoder.encode(dto.getPassword())); // Mã hóa BCrypt
+        user.setRole("ROLE_USER");
+        return userRepository.save(user);
     }
 
-    public User createUser(User user) {
-        return repository.save(user);
-    }
+    public String login(String username, String password) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found"));
 
-    public User updateUser(Long id, User user) {
-
-        User oldUser = repository.findById(id).orElse(null);
-
-        if (oldUser == null) {
-            return null;
+        if (!passwordEncoder.matches(password, user.getPasswordHash())) {
+            throw new RuntimeException("Invalid credentials");
         }
 
-        oldUser.setUsername(user.getUsername());
-        oldUser.setEmail(user.getEmail());
-        oldUser.setPassword(user.getPassword());
-
-        return repository.save(oldUser);
+        return jwtUtil.generateToken(user.getId().toString(), user.getUsername());
     }
 
-    public void deleteUser(Long id) {
-        repository.deleteById(id);
+    public User getProfile(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("User not found"));
     }
 }

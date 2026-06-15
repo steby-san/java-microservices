@@ -1,20 +1,5 @@
 server:
-  port: 8888
-
+  port: 0 # Để port ngẫu nhiên hoặc sau này cấu hình cụ thể
 spring:
   application:
     name: config-server
-
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: classpath:/config
-
-  profiles:
-    active: native
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/

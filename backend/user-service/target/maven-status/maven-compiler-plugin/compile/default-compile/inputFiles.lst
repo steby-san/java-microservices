@@ -1,6 +1,8 @@
-G:\miniproject\java-microservices\backend\user-service\src\main\java\com\ecommerce\userservice\dto\UserDTO.java
-G:\miniproject\java-microservices\backend\user-service\src\main\java\com\ecommerce\userservice\repository\UserRepository.java
-G:\miniproject\java-microservices\backend\user-service\src\main\java\com\ecommerce\userservice\entity\User.java
-G:\miniproject\java-microservices\backend\user-service\src\main\java\com\ecommerce\userservice\controller\UserController.java
-G:\miniproject\java-microservices\backend\user-service\src\main\java\com\ecommerce\userservice\UserServiceApplication.java
-G:\miniproject\java-microservices\backend\user-service\src\main\java\com\ecommerce\userservice\service\UserService.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/UserServiceApplication.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/controller/UserController.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/dto/UserDTO.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/entity/User.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/exception/GlobalExceptionHandler.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/repository/UserRepository.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/service/UserService.java
+/Users/doantran/Desktop/java-microservices/backend/user-service/src/main/java/com/ecommerce/userservice/util/JwtUtil.java
