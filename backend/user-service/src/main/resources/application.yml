@@ -1,5 +1,25 @@
 server:
-  port: 0 # Để port ngẫu nhiên hoặc sau này cấu hình cụ thể
+  port: 8081
+
 spring:
   application:
     name: user-service
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 12345678 # Đảm bảo đúng pass MySQL của bạn
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+eureka:
+  client:
+    enabled: false # Tắt Eureka hoàn toàn để không lỗi kết nối
+
+# Tắt luôn việc bắt buộc tìm config server
+spring.cloud.config.enabled: false
